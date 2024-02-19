@@ -53,6 +53,8 @@ The temperature 'temp' and number of configurations 'nconfigurations' must be pr
 4.1 Copy 'increate' and  2 'jobcreate..py' file to each stage in normal_modes and Run "increate" to generate .in file for MD run
      anaconda prompt terminal cmd: bash increate
      use python for: 'jobcreate.py' & 'jobcreate_embeded.py'
+     
+NOTE: double check temp, lattice, natoms and all possible parameters
 NOTE: jobcreate.py create all 20 job "pjob-{i}" script for each .in file
 NOTE: jobcreate_embeded.py create single file "pjob_all.sh" to run all 20 .in file at once.
 
