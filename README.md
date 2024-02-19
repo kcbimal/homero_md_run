@@ -50,9 +50,12 @@ The temperature 'temp' and number of configurations 'nconfigurations' must be pr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4. Do short MD runs using the generated atomic configurations and use HELD to get updated (more accurate) force_constants.  
-4.1 Copy increate and jobcreate file to each stage in normal_modes and Run "increate" to generate .in file for MD run
+4.1 Copy 'increate' and  2 'jobcreate..py' file to each stage in normal_modes and Run "increate" to generate .in file for MD run
      anaconda prompt terminal cmd: bash increate
-     anaconda prompt terminal cmd: bash jobcreate
+     use python for: 'jobcreate.py' & 'jobcreate_embeded.py'
+NOTE: jobcreate.py create all 20 job "pjob-{i}" script for each .in file
+NOTE: jobcreate_embeded.py create single file "pjob_all.sh" to run all 20 .in file at once.
+
 4.2 Run thus created .in file in supercomputer using "job-$i" files.
 4.3 Download ".out" file to the local computer in the same stage of the "normal_modes" directory.
 
